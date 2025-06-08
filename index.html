@@ -2,15 +2,45 @@
 <html lang="en">
     <head>
         <meta charset="UTF-8" />
+        <link rel="stylesheet" href="./css/styles.css">
     </head>
     <body>
-        <div>
-            <h1 class="header_text">
-                Will you be my valentine?
-            </h1>
-        </div>
-        <div class="gif_containter">
-            <img src="https://media.giphy.com/media/LnKonfpQ44fNvuGLkA/giphy.gif">
+        <div class="container">
+            <div>
+                <h1 class="header_text">
+                    Ellie, will you be my valentine?
+                </h1>
+            </div>
+            <div class="gif_container">
+                <img src="https://media0.giphy.com/media/v1.Y2lkPTc5MGI3NjExa2tjaTQ2eWg0OHgzZzZuM3NveGJzYWhsNjhjajg5cTZ3OW5mMzZzdiZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9cw/NxgjDYxluo0sRjHw80/giphy.gif">
+            </div>
+            <div class="buttons">
+                <button class="btn" id="yesButton" onclick="nextPage()">
+                    Yes!
+                </button>
+                <button class="btn" id="noButton" onmouseover="moveButton()">
+                    Nope
+                </button>
+                <script>
+                    function nextPage() {
+                        window.location.href="yes.html"
+                    }
+
+                    function moveButton() {
+                        const button = document.getElementById('noButton')
+                        const padding = 170;
+
+                        const maxX = window.innerWidth - button.offsetWidth - padding;
+                        const maxY = window.innerHeight - button.offsetHeight - padding;
+                        
+                        const x = Math.random() * maxX;
+                        const y = Math.random() * maxY;
+
+                        button.style.left = `${x}px`;
+                        button.style.top = `${y}px`;
+                    }
+                </script>
+            </div>
         </div>
     </body>
 </html>

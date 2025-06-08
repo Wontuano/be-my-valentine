@@ -1,14 +1,69 @@
 body {
     display: flex;
+    flex-direction: column;
     justify-content: center;
     align-items: center;
     height: 100vh;
-    background-color: #F8C8DC;
+    background-color: #fa9fae;
+}
+
+@font-face {
+    font-family: 'Peanuts';
+    src: url('../fonts/Snoopy.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+.header_text {
+    font-family: 'Peanuts';
+    font-size: 3rem;
+    margin-top: -50px;
 }
 
 .gif_container {
     display: flex;
     justify-content: center;
     align-items: center;
-    margin-left: 90px;
+    margin-top: -30px;
+}
+
+.gif_container img {
+    max-width: 75%;
+    height: auto;
+}
+
+#noButton {
+    position: absolute;
+    margin-left: 150px;
+    transition: 0.5s;
+}
+
+#yesButton {
+    position: absolute;
+    margin-right: 150px;
+}
+
+.buttons {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    margin-top: 20px;
+    margin-left: 20px;
+}
+
+.btn {
+    font-family: 'Peanuts';
+    background-color: #fff3f5;
+    color: black;
+    padding: 15px 32px;
+    text-align: center;
+    display: inline-block;
+    font-size: 1.5rem;
+    margin: 4px 2px;
+    cursor: pointer;
+    border: none;
+    border-radius: 12px;
+    transition: background-color 0.3s ease;
+    margin-top: 50px;
 }
