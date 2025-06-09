@@ -67,3 +67,7 @@ body {
     transition: background-color 0.3s ease;
     margin-top: 50px;
 }
+
+.btn:hover {
+    background-color: #da4f66;
+}
